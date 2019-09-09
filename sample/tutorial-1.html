@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tutorial for javascrit</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<script type="text/javascript">
+		var isLight = false;
+		function lightOnOff() {
+			console.log("ok")
+			console.log(isLight)
+			if(isLight) {
+				console.log("ok")
+				document.getElementById('light').style.backgroundColor = 'blue'
+				isLight = false
+			} else {
+				document.getElementById('light').style.backgroundColor = 'black'
+				isLight = true
+			}
+		}
+
+		setTimeout(()=>{
+			lightOnOff()
+			alert("ad show")
+			var para = document.createElement("P");  
+			for (var i = 0; i < 10; i++) {
+				var t = document.createTextNode(i + " list");      // Create a text node
+				para.appendChild(t);  				
+				document.getElementById('body-tag').appendChild(para);
+			}
+
+
+		}, 5000)
+	</script>
+</head>
+<body id="body-tag">
+
+	<div id='light'>
+		<table>
+			<tbody>
+				<td>
+					<img src="https://img.etimg.com/thumb/msid-63780927,width-643,imgsize-97772,resizemode-4/charlie-chaplin-twitter.jpg" style="height: 200px; width: 200px;border-radius: 100px;">
+				</td>
+				<td>
+						<h3>HOBBIES</h3>
+						<ol> <!-- ordered list -->
+							<li>Coding</li>
+							<li>Sketching</li>
+						</ol>
+						<h3>MORE INFO</h3>
+						<ol type='i'> <!-- ordered list -->
+							<li>PROECT ONE</li>
+							<li>PROJECT TWO</li>
+						</ol>
+					
+				</td>
+			</tbody>
+		</table>
+	</div>
+
+	<button onclick="lightOnOff()">light</button>
+
+
+</body>
+</html>
